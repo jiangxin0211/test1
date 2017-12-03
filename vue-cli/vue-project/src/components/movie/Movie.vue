@@ -8,8 +8,7 @@
               <img src="/static/img/loading.gif" alt="">
     </div>
     <common-footer  bgColor="rgb(33, 150, 243)"></common-footer>
-    
-    
+   
   </div>
 </template>
 

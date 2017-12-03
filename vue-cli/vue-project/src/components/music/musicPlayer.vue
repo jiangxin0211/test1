@@ -1,5 +1,6 @@
 <template>
     <div class='player'>
+        {{}}
     <a-player :music="musicList" :narrow="false" :autoplay="true"
     showlrc="3" :mutex="true" theme="#ff0000"
     listmaxheight="513px" v-if="isShow">

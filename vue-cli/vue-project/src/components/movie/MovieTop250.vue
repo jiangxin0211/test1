@@ -8,10 +8,11 @@
 
 <script>
 import MovieList from "./MovieList"
+import Axios from "axios"
 export default {
   data () {
     return {
-     MovieList[]
+     MovieList:[]
     }
   },
    mounted(){
@@ -39,7 +40,7 @@ export default {
       } 
   },
   components:{
-      MOvieList[]
+      MovieList
   }
 }
 </script>
