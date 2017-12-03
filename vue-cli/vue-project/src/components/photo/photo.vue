@@ -26,6 +26,15 @@ export default {
   },
   computed:{
     ...mapState(["photoData"])
+  },
+  methods:{
+    ...mapActions(["setPhotoData"])
+  },
+  mounted(){
+    Axios.get('/static/photo-data.json')
+    .then((res)=>{
+      this.setPhotoData(res.data.photoData);
+    })
   }
   components:{
       CommonHeader,
@@ -36,5 +45,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-   
+   .photo-list{
+     margin:1rem 0;
+     overflow:hidden;
+   }
+   .photo-list li{
+     width: 50%;
+     float: left;
+   }
 </style>
