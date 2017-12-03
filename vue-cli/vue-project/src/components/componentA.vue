@@ -30,7 +30,7 @@ export default {
   computed:{
    ...mapState(["add","reduce"]),
    ...mapGetters(["addAction","reduceAction"])
-  }
+  },
   components:{
     ComponentB,
     ComponentC

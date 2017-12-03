@@ -9,7 +9,7 @@
 <script>
 import CommonHeader from "../common/CommonHeader"
 import CommonFooter from "../common/CommonFooter"
-import {Swipe,SwipeItem} from "../book/"
+// import {Swipe,SwipeItem} from "../book/"
 export default {
   data () {
     return {
