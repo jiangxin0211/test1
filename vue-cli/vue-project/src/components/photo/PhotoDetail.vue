@@ -30,12 +30,6 @@ export default {
   methods:{
     ...mapActions(["setPhotoData"])
   },
-  mounted(){
-    Axios.get('/static/photo-data.json')
-    .then((res)=>{
-      this.setPhotoData(res.data.photoData);
-    })
-  },
   components:{
       CommonHeader,
       CommonFooter
