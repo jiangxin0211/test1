@@ -1,6 +1,8 @@
 <template>
   <div class="header" :style="{background:bgColor}">
-    <button>首页</button>
+    <slot>
+        <button @click="back">{{nav}}</button>
+    </slot>
     <h2>{{title}}</h2>
     
   </div>
@@ -8,11 +10,18 @@
 
 <script>
 export default {
-  props: ['title','bgColor'],
+  props: ['title','bgColor','nav'],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
+  },
+  methods:{
+    back(){
+      // history.go(-1);
+    this.$router.go(-1);
+    }
+    
   }
 }
 </script>

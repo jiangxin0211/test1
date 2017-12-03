@@ -15,7 +15,6 @@ export default {
     prop:['bgColor'],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
