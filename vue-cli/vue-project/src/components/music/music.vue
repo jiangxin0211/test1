@@ -34,7 +34,7 @@ export default {
    .albums{
      position:absolute;
      top:1rem;
-     botton:1rem;
+     button:1rem;
      width:100%
    }
    .albums li{

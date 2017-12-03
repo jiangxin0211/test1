@@ -19,8 +19,14 @@ export default {
   
   data () {
     return {
-     
+     musicList:[]
     }
+  },
+  mounted(){
+      Axios.get('/static/musiclist.json')
+      .then((res)=>{
+          this.musicList = res.data.albums;
+      })
   }
 }
 </script>
