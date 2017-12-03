@@ -7,7 +7,7 @@
     <div class="loading" v-show="isShow">
               <img src="/static/img/loading.gif" alt="">
     </div>
-    <common-footer></common-footer>
+    <common-footer  bgColor="rgb(33, 150, 243)"></common-footer>
     
     
   </div>

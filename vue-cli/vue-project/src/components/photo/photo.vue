@@ -1,7 +1,7 @@
 <template>
   <div class="music">
     <common-header title="photo" bgColor="rgb(63, 81, 181)"></common-header>
-    <common-footer></common-footer>
+    <common-footer bgColor="rgb(63, 81, 181)"></common-footer>
     
   </div>
 </template>
