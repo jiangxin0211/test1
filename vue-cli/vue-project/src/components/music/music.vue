@@ -1,6 +1,6 @@
 <template>
   <div class="music">
-    <common-header title="music" bgColor="rgb(0, 150, 136)"></common-header>
+    <common-header title="music" nav="<" bgColor="rgb(0, 150, 136)"></common-header>
     <router-view></router-view>
     <common-footer bgColor="rgb(0, 150, 136)"></common-footer>
     
@@ -34,7 +34,7 @@ export default {
    .albums{
      position:absolute;
      top:1rem;
-     button:1rem;
+     bottom:1rem;
      width:100%
    }
    .albums li{

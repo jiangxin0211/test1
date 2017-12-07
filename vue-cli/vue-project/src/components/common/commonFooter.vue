@@ -34,8 +34,13 @@ export default {
       }
       .footer li{
         flex       : 1;
-        color      : #fff;
         line-height: 1rem;
         text-align : center;
+      }
+      .footer li a{
+        color: #ccc;
+      }
+      .footer li a.router-link-active{
+        color:#fff;
       }
 </style>

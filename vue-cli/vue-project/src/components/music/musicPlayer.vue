@@ -1,8 +1,8 @@
 <template>
     <div class='player'>
-    <a-player :music="music" :narrow="false" 
-    :autoplay="true"showlrc="3" :mutex="true" 
-    theme="#ff0000"listmaxheight="513px" 
+    <a-player :music="musicList" :narrow="false" 
+    :autoplay="true" :showlrc="3" :mutex="true" 
+    theme="#ff0000" listmaxheight="513px" 
     v-if="isShow"></a-player>
     <!--{{$route.params.id}}-->
     </div>
@@ -17,14 +17,7 @@ export default {
     return {
      musicData:[],
      musicList:[],
-     isShow: false,
-     music:{
-           "title":"成都",
-            "author":"赵雷",
-            "src":"http://sc1.111ttt.com/2016/1/12/04/205041718593.mp3",
-            "musicImgSrc": "http://p4.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg",
-            "lrc":"成都-赵雷.lrc"
-        }
+     isShow: false
     }
   },
    mounted(){
@@ -36,12 +29,12 @@ export default {
                 obj.title = this.musicData[i].title;
                 obj.author = this.musicData[i].author;
                 obj.url = this.musicData[i].src;
-                obj.pic = this.musicData[i].lrc;
+                obj.pic = this.musicData[i].musicImgSrc;
+                obj.lrc = "/static/" + this.musicData[i].lrc;
                 this.musicList.push(obj);
          }
          this.isShow = true;
      });
- 
   },
   components:{
       APlayer
