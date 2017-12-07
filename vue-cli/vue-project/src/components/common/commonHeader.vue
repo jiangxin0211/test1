@@ -36,13 +36,13 @@ export default {
         position: fixed;
         top:0;
         width:100%;
-    },
+    }
     .header button{
         width: 1rem;
         height: 1rem;
         color: #fff;
 
-    },
+    }
     .header h2{
         flex: 1;
         text-align: center;

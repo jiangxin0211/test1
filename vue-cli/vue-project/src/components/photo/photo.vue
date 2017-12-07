@@ -1,10 +1,10 @@
 <template>
   <div class="music">
-    <common-header title="photo" bgColor="rgb(63, 81, 181)"></common-header>
-      <ul class="photo=list">
+    <common-header title="photo" nav="<" bgColor="rgb(63, 81, 181)"></common-header>
+      <ul class="photo-list">
           <li v-for="(photo,index) in phptoData" :key="index">
               <router-link :to="'/photo/detail' + index">
-                  <img src="photo.src" alt="">
+                  <img :src="photo.src" alt="">
               </router-link>
           </li>
       </ul>
