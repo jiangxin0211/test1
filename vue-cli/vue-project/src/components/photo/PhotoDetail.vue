@@ -1,13 +1,9 @@
 <template>
-  <div class="music">
-    <common-header title="photo" bgColor="rgb(63, 81, 181)"></common-header>
-      <ul class="photo=list">
-          <li v-for="(photo,index) in phptoData" :key="index">
-              <router-link :to="'/photo/detail' + index">
-                  <img src="photo.src" alt="">
-              </router-link>
-          </li>
-      </ul>
+  <div class="detail">
+    <common-header title="photo" nav="<" bgColor="rgb(63, 81, 181)"></common-header>
+      <v-touch class='photo-detail' :style="{background:bg}"
+        @swipeleft='left' @swiperight='right'>
+      </v-touch>
     <common-footer bgColor="rgb(63, 81, 181)"></common-footer>
     
   </div>
@@ -16,19 +12,28 @@
 <script>
 import CommonHeader from "../common/CommonHeader"
 import CommonFooter from "../common/CommonFooter"
-import {mapState,mapActions} from "vuex"
+import {mapState} from "vuex"
 import Axios from "axios"
 export default {
   data () {
     return {
-     bgColor: "rgb(63,81,181)"
+     aa:this.$router.params.index
+    //  photoData:this.$store.state.photoData
     }
   },
   computed:{
-    ...mapState(["photoData"])
+    bg(){
+      return "url("+ this.$store.state.photoData[this.aa].src +") no-repeat center / contain #000"
+    },
+    ...mapState(['photoData'])
   },
   methods:{
-    ...mapActions(["setPhotoData"])
+    left(){
+      this.aa++;
+    },
+    right(){
+      this.aa--;
+    }
   },
   components:{
       CommonHeader,
@@ -39,12 +44,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-   .photo-list{
-     margin:1rem 0;
-     overflow:hidden;
-   }
-   .photo-list li{
-     width: 50%;
-     float: left;
+   .photo-detail{
+     position: absolute;
+     top: 1rem;
+     bottom: 0;
+     width: 100%;
    }
 </style>

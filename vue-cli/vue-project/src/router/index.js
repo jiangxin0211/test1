@@ -45,10 +45,10 @@ export default new Router({
     {
       path:'/photo',
       component: Photo
+    },
+    {
+      path:'/photo/detail/:index',
+      component: PhotoDetail
     }
-    // {
-    //   path:'/photo/detail/:index',
-    //   component: PhotoDetail
-    // }
   ]
 })
